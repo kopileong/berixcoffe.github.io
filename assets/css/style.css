@@ -1,21 +1,41 @@
-/* ===== GLOBAL ===== */
-
+/* =========================
+   GLOBAL
+========================= */
 body {
   font-family: 'Inter', sans-serif;
   background-color: #fafafa;
   padding-top: 80px; /* navbar fixed */
-  transition: background-color .3s, color .3s;
+  transition: background-color .3s ease, color .3s ease;
 }
 
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  backdrop-filter: blur(6px);
+}
+.navbar-brand img {
+  transition: filter .3s ease;
+}
+.navbar-nav .btn {
+  border-radius: 30px;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 
-/* ===== HERO ===== */
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
   position: relative;
   height: 100vh;
   color: #fff;
   overflow: hidden;
 }
-
 .hero video {
   position: absolute;
   inset: 0;
@@ -23,44 +43,48 @@ body {
   height: 100%;
   object-fit: cover;
 }
-
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,.55);
 }
-
 .hero-content {
   position: relative;
-  index: 2;
+  z-index: 2;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  backdrop-filter: blur(6px);
+/* =========================
+   SECTION HEADER / LOGO
+========================= */
+.section-logo {
+  position: relative;
+  text-align: center;
 }
-.navbar-collapse.show .nav-item {
-  animation: fadeDown .4s ease forwards;
+.section-logo img {
+  height: 70px;
+  padding: 14px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 12px 30px rgba(0,0,0,.18);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.section-logo img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.25);
+}
+.section-logo::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #c0392b;
+  margin: 10px auto 0;
 }
 
-.navbar-collapse.show .nav-item:nth-child(1) { animation-delay: .05s }
-.navbar-collapse.show .nav-item:nth-child(2) { animation-delay: .1s }
-.navbar-collapse.show .nav-item:nth-child(3) { animation-delay: .15s }
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* ===== PRODUCT CARD ===== */
+/* =========================
+   PRODUCT CARD
+========================= */
 .product-card {
   border: none;
   border-radius: 14px;
@@ -68,37 +92,39 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,.06);
   transition: transform .25s ease, box-shadow .25s ease;
 }
-
 .product-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 14px 36px rgba(0,0,0,.12);
 }
-
 .product-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
   object-position: center;
-  filter: brightness(1.08) contrast(1.05) saturate(1.05);
+  filter: brightness(1.05) contrast(1.05) saturate(1.05);
 }
-
+.product-card .card-body {
+  padding: 20px;
+}
 .product-card .card-title {
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
-
 .product-card .card-text {
-  font-size: .9rem;
-  line-height: 1.4;
+  font-size: .95rem;
   color: #555;
 }
-
-/* ===== BUTTON ===== */
 .product-card .btn {
   border-radius: 30px;
   font-weight: 600;
+  transition: all .25s ease;
+}
+.product-card .btn:hover {
+  transform: scale(1.03);
 }
 
-/* ===== FLOATING WA ===== */
+/* =========================
+   FLOATING WHATSAPP
+========================= */
 .wa-float {
   position: fixed;
   bottom: 20px;
@@ -109,126 +135,92 @@ body {
   border-radius: 50px;
   font-weight: 600;
   z-index: 9999;
+  box-shadow: 0 6px 16px rgba(0,0,0,.25);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.wa-float:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(0,0,0,.35);
 }
 
 /* =========================
-   DARK MODE GLOBAL
+   FOOTER
 ========================= */
-
-body {
-  padding-top: 80px;
-  transition: background-color .3s, color .3s;
+footer {
+  font-size: .85rem;
+  letter-spacing: .3px;
 }
 
+/* =========================
+   DARK MODE
+========================= */
 body.dark-mode {
   background-color: #121212;
   color: #eaeaea;
 }
-
-/* Navbar */
 body.dark-mode .navbar {
   background-color: #1f1f1f !important;
 }
-
 body.dark-mode .navbar .nav-link,
 body.dark-mode .navbar-brand {
   color: #eaeaea !important;
 }
-body.dark-mode .product-card {
-  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+body.dark-mode .navbar-brand img {
+  filter: brightness(1.15);
 }
-.navbar-nav .btn {
-  border-radius: 30px;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-
-/* Section */
 body.dark-mode section {
   background-color: #121212;
 }
-
-/* Light section override */
 body.dark-mode .bg-light {
   background-color: #1e1e1e !important;
 }
-
-/* Card (produk) */
 body.dark-mode .card {
   background-color: #1c1c1c;
   color: #fff;
   border-color: #333;
 }
-
-
-
-/* Footer */
+body.dark-mode .product-card {
+  box-shadow: 0 10px 30px rgba(0,0,0,.6);
+}
 body.dark-mode footer {
   background-color: #000 !important;
 }
-
-/* Button toggle */
 body.dark-mode .btn-outline-dark {
   color: #fff;
   border-color: #fff;
 }
 
-/* Logo lebih terang */
-body.dark-mode .navbar-brand img {
-  filter: brightness(1.15);
-}
-.section-logo img {
-  display: block;
-  margin: 0 auto;
-}
-.section-logo {
-  position: relative;
-}
-
-.section-logo::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: #c0392b;
-  margin: 10px auto 0;
-}
-.section-logo img {
-  height: 50px;
-}
-
-@media (min-width: 768px) {
-  .section-logo img {
-    height: 70px;
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+  .product-card img {
+    height: 180px;
+  }
+  .hero h1 {
+    font-size: 2rem;
   }
 }
-/*tess*/
-.section-logo img {
-  height: 70px;
-  padding: 14px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 12px 30px rgba(0,0,0,.18);
-}
-body.dark-mode .section-logo img {
-  background: #1f1f1f;
-  box-shadow: 0 12px 30px rgba(0,0,0,.6);
-}
-.section-logo img {
-  height: 70px;
-  border-radius: 50%;
-  box-shadow: 0 10px 22px rgba(0,0,0,.18);
-  transition: transform .3s ease, box-shadow .3s ease;
+.btn-shopee {
+  background-color: #ee4d2d;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
 }
 
-.section-logo img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0,0,0,.25);
+.btn-shopee:hover {
+  background-color: #d73211;
+  color: #fff;
+}
+
+.btn-tokped {
+  background-color: #03ac0e;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.btn-tokped:hover {
+  background-color: #028a0b;
+  color: #fff;
 }
