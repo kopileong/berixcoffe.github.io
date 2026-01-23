@@ -1,193 +1,195 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Produk Kopi Leong – Kopi Lokal NTB Berkualitas</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Produk Kopi Leong – Berix Coffee</title>
 
-  <meta name="description" content="Etalase produk Kopi Leong. Kopi bubuk, kopi sangrai, dan paket coffee drip. Pesan langsung via WhatsApp.">
-  <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+  <!-- SEO -->
+  <meta name="description" content="Etalase produk Kopi Leong X Berix Coffee. Kopi bubuk, kopi sangrai, coffee drip, dan merchandise." />
 
-  <!-- Bootstrap 5 -->
-  <link rel="stylesheet" href="assets/theme/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/theme/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/logo.png" />
 
-  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Bootstrap & Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
 
-
-  <style>
-    body { font-family: Inter, sans-serif; }
-    .product-card img { border-radius: 10px; }
-    .wa-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      padding: 14px 18px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      z-index: 9999;
-      box-shadow: 0 4px 10px rgba(0,0,0,.3);
-    }
-  </style>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
 <body>
-      <a class="navbar-brand position-absolute start-50 translate-middle-x" href="index.html">
-</a>
+
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
   <div class="container">
-
-    <!-- LOGO KIRI -->
-    <a class="navbar-brand fw-bold" href="index.html">
-      <img src="assets/images/logo.png" height="38" alt="Berix Coffee">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="assets/images/logo.png" height="38" alt="Berix Coffee" />
+      Berix Coffee
     </a>
 
-    <!-- TOGGLER (MOBILE) -->
-    <button class="navbar-toggler ms-auto" type="button"
-      data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- MENU KANAN -->
     <div class="collapse navbar-collapse" id="navbarMenu">
       <ul class="navbar-nav ms-auto align-items-center gap-lg-3 text-center">
-
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="etalase.html">Produk</a></li>
         <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+          <a class="btn btn-danger" href="https://wa.me/6285158602227" target="_blank">💬 WhatsApp</a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" href="etalase.html">Produk</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="btn btn-danger"
-             href="https://wa.me/6285158602227"
-             target="_blank">
-            💬 WhatsApp
-          </a>
-        </li>
-
-        <li class="nav-item">
-          <button id="darkToggle" class="btn btn-outline-dark btn-sm">
+          <button id="darkToggle" class="btn btn-outline-dark btn-sm" aria-label="Toggle Dark Mode">
             <i class="bi bi-moon"></i>
           </button>
         </li>
-
       </ul>
     </div>
-
-  </div>
-</nav>
-
-  </div>
-</nav>
-
   </div>
 </nav>
 
 <!-- HEADER -->
 <section class="text-center py-5 bg-light">
   <div class="container">
-
-    <!-- LOGO / ICON TENGAH -->
     <div class="section-logo mb-3">
-      <img src="assets/images/logo-produk.svg" alt="Kopi Leong"
-           height="40">
+      <img src="assets/images/logo-produk.svg" alt="Kopi Leong" />
     </div>
-
     <h1 class="fw-bold">Produk Unggulan Kopi Leong</h1>
-    <p class="text-muted">
-      Kopi lokal NTB dengan aroma kuat dan rasa berkarakter
-    </p>
-
+    <p class="text-muted">Kopi lokal NTB dengan aroma kuat dan rasa berkarakter</p>
   </div>
 </section>
-
 
 <!-- PRODUK -->
 <section class="py-5">
   <div class="container">
     <div class="row g-4">
 
-
-      <!-- PRODUK 1 -->
+      <!-- Produk 1 -->
       <div class="col-md-4">
         <div class="card product-card h-100 text-center">
-<img 
-  src="assets/images/produk/kopi-bubuk.png"
-  class="card-img-top"
-  alt="Kopi Bubuk"
-  loading="lazy"
-  decoding="async">
+          <img src="assets/images/produk/kopi-bubuk.png" class="card-img-top" alt="Kopi Bubuk 100 gram" loading="lazy" />
           <div class="card-body">
             <h5 class="card-title fw-bold">Kopi Bubuk 100 gr</h5>
             <p class="text-danger fw-bold">Rp 35.000</p>
-            <p class="card-text">
-              Kopi bubuk pilihan dengan aroma kuat dan rasa seimbang.
-            </p>
-            <a href="https://wa.me/6285158602227?text=Halo%20saya%20ingin%20pesan%20Kopi%20Bubuk%20100gr"
-               class="btn btn-danger w-100" target="_blank">
-              Beli via WhatsApp
-            </a>
+            <p class="card-text">Kopi bubuk pilihan dengan aroma kuat dan rasa seimbang.</p>
+          <a href="https://wa.me/6285158602227?text=Halo%20saya%20ingin%20pesan%20Kopi%20Bubuk%20100gr"
+   class="btn btn-danger w-100 mb-2"
+   target="_blank">
+  💬 Beli via WhatsApp
+</a>
+
+<div class="d-flex gap-2">
+  <a href="https://shopee.co.id/USERNAME_SHOPEE_KAMU"
+     target="_blank"
+     class="btn btn-shopee w-100">
+     Shopee
+  </a>
+
+  <a href="https://tokopedia.link/USERNAME_TOKPED_KAMU"
+     target="_blank"
+     class="btn btn-tokped w-100">
+     Tokopedia
+  </a>
+</div>
+
           </div>
         </div>
       </div>
 
-      <!-- PRODUK 2 -->
+      <!-- Produk 2 -->
       <div class="col-md-4">
         <div class="card product-card h-100 text-center">
-          <img src="assets/images/produk/kopi-sangrai.png" class="card-img-top" alt="Kopi Sangrai">
+          <img src="assets/images/produk/kopi-sangrai.png" class="card-img-top" alt="Kopi Sangrai 250 gram" loading="lazy" />
           <div class="card-body">
             <h5 class="card-title fw-bold">Kopi Sangrai 250 gr</h5>
             <p class="text-danger fw-bold">Rp 75.000</p>
-            <p class="card-text">
-              Biji kopi sangrai fresh, siap digiling sesuai selera.
-            </p>
-            <a href="https://wa.me/6285158602227?text=Halo%20saya%20ingin%20pesan%20Kopi%20Sangrai%20250gr"
-               class="btn btn-danger w-100" target="_blank">
-              Beli via WhatsApp
-            </a>
+            <p class="card-text">Biji kopi sangrai fresh, siap digiling sesuai selera.</p>
+          <a href="https://wa.me/6285158602227?text=Halo%20saya%20ingin%20pesan%20Kopi%20Bubuk%20100gr"
+   class="btn btn-danger w-100 mb-2"
+   target="_blank">
+  💬 Beli via WhatsApp
+</a>
+
+<div class="d-flex gap-2">
+  <a href="https://shopee.co.id/USERNAME_SHOPEE_KAMU"
+     target="_blank"
+     class="btn btn-shopee w-100">
+     Shopee
+  </a>
+
+  <a href="https://tokopedia.link/USERNAME_TOKPED_KAMU"
+     target="_blank"
+     class="btn btn-tokped w-100">
+     Tokopedia
+  </a>
+</div>
+
           </div>
         </div>
       </div>
-      
 
-      <!-- PRODUK 3 -->
+      <!-- Produk 3 -->
       <div class="col-md-4">
         <div class="card product-card h-100 text-center">
-          <img src="assets/images/produk/coffee-drip.png" class="card-img-top" alt="Coffee Drip">
+          <img src="assets/images/produk/coffee-drip.png" class="card-img-top" alt="Paket Coffee Drip" loading="lazy" />
           <div class="card-body">
             <h5 class="card-title fw-bold">Paket Coffee Drip</h5>
             <p class="text-danger fw-bold">Rp 50.000</p>
-            <p class="card-text">
-              Praktis, mudah diseduh, cocok untuk oleh-oleh.
-            </p>
-            <a href="https://wa.me/6285158602227?text=Halo%20saya%20ingin%20pesan%20Paket%20Coffee%20Drip"
-               class="btn btn-danger w-100" target="_blank">
-              Beli via WhatsApp
-            </a>
+            <p class="card-text">Praktis, mudah diseduh, cocok untuk oleh-oleh.</p>
+         <a href="https://wa.me/6285158602227?text=Halo%20saya%20ingin%20pesan%20Kopi%20Bubuk%20100gr"
+   class="btn btn-danger w-100 mb-2"
+   target="_blank">
+  💬 Beli via WhatsApp
+</a>
+
+<div class="d-flex gap-2">
+  <a href="https://shopee.co.id/USERNAME_SHOPEE_KAMU"
+     target="_blank"
+     class="btn btn-shopee w-100">
+     Shopee
+  </a>
+
+  <a href="https://tokopedia.link/USERNAME_TOKPED_KAMU"
+     target="_blank"
+     class="btn btn-tokped w-100">
+     Tokopedia
+  </a>
+</div>
+
           </div>
         </div>
       </div>
-       <!-- PRODUK 4 -->
+
+      <!-- Produk 4 -->
       <div class="col-md-4">
         <div class="card product-card h-100 text-center">
-          <img src="assets/images/produk/baju.png" class="card-img-top" alt="Kopi Sangrai">
+          <img src="assets/images/produk/baju.png" class="card-img-top" alt="Kaos Berix Coffee" loading="lazy" />
           <div class="card-body">
-            <h5 class="card-title fw-bold">Berix </h5>
+            <h5 class="card-title fw-bold">Kaos Berix Coffee</h5>
             <p class="text-danger fw-bold">Rp 95.000</p>
-            <p class="card-text">
-              baju kaos .
-            </p>
-            <a href="https://wa.me/6285158602227?text=Halo%20saya%20ingin%20pesan%20Kopi%20Sangrai%20250gr"
-               class="btn btn-danger w-100" target="_blank">
-              Beli via WhatsApp
-            </a>
+            <p class="card-text">Kaos official Berix Coffee, nyaman dipakai harian.</p>
+          <a href="https://wa.me/6285158602227?text=Halo%20saya%20ingin%20pesan%20Kopi%20Bubuk%20100gr"
+   class="btn btn-danger w-100 mb-2"
+   target="_blank">
+  💬 Beli via WhatsApp
+</a>
+
+<div class="d-flex gap-2">
+  <a href="https://shopee.co.id/USERNAME_SHOPEE_KAMU"
+     target="_blank"
+     class="btn btn-shopee w-100">
+     Shopee
+  </a>
+
+  <a href="https://tokopedia.link/USERNAME_TOKPED_KAMU"
+     target="_blank"
+     class="btn btn-tokped w-100">
+     Tokopedia
+  </a>
+</div>
+
           </div>
         </div>
       </div>
@@ -202,13 +204,10 @@
 </footer>
 
 <!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/6285158602227"
-   class="wa-float"
-   target="_blank">
-   💬 Chat WhatsApp
-</a>
+<a href="https://wa.me/6285158602227" class="wa-float" target="_blank">💬 Chat WhatsApp</a>
 
-<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/darkmode.js"></script>
 
 </body>
