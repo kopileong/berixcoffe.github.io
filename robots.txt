@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://berixcoffee.github.io/sitemap.xml
